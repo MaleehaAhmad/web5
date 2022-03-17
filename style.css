@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
+
+
+:root{
+    --main-bg-color: #fff;
+    --main-color:#91b0ba ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+    width: 100%;
+ }
+ 
+
+/*NavBar*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 3vw;
+    background: var(--main-color);
+    position: fixed;
+    z-index: 99;
+    width: 100vw;
+}
+
+.navbar img{
+    width: 12vw;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li{
+    padding-right: 2vw;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar ul li a:hover{
+    color: #111;
+}
+
+
+
+/*Store*/
+
+.store1{
+    background:url('images/bg1.png') no-repeat center;
+    background-size: 100vw;
+    object-fit: cover;
+}
+
+.store1 .shape{
+    position: relative;
+    background: var(--main-color);
+    border-radius: 40%;
+    width: 30vw;
+    margin-left: 13%;
+    padding-top: 5%;
+    transform: translateY(20%);
+    animation: shape ease-in 2s ;
+  
+}
+
+@keyframes shape{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: .2;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.store1 .textbg{
+    height: 80vh;
+      width: 100%;
+      color: white;
+      position: relative;
+      margin: 0%;
+      text-align: center;
+      animation: shape ease-in 3s ;
+}
+
+.textbg p{
+    font-size: 17px;
+    height: 30%;
+    line-height: 1.04;
+    text-align: center;
+  }
+
+  .textbg ::before {
+    content: "";
+    float: left;
+    height: 100%;
+    width: 50%;
+    shape-outside: polygon(
+      0 0,
+      98% 0,
+      50% 6%,
+      23.4% 17.3%,
+      6% 32.6%,
+      0 50%,
+      6% 65.6%,
+      23.4% 82.7%,
+      50% 94%,
+      98% 100%,
+      0 100%
+    );
+    shape-margin: 7%;
+  }
+ 
+  .textbg p::before{
+    content: "";
+    float: right;
+    height: 100%;
+    width: 50%;
+    /*shape-outside: polygon(
+      4% 0%,
+      200% 0%,
+      200% 200%,
+      4% 200%,
+      100% 188%,
+     153.2% 165.4%,
+      188% 131.2%,
+      200% 100%,
+      188% 65.2%,
+     153.2% 34.6%,
+      100% 12%
+      );*/
+
+      shape-outside: polygon(
+      150% 10%,
+      200% 0%,
+      200% 200%,
+      4% 200%,
+      100% 188%,
+      153.2% 165.4%,
+      188% 131.2%,
+      200% 100%,
+     188% 65.2%,
+      153.2% 34.6%,
+      100% 12%
+      );
+    shape-margin: 7%;
+  }
+
+/*
+.store1 .shape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}*/
+
+/*
+.store1 .shape .circle1{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.store1 .shape .circle1 .cir1{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+
+}
+
+.store1 .shape .circle1 .texth{
+    position: absolute;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+.store1 .shape .texth span{
+    position: absolute;
+    left: 50%;
+    top: 17%;
+    font-size: 1.2em;
+    transform-origin: 0px 100px;
+} */
+
+.store1 .shape img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+
+.store1 .shape a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #111;
+    padding: 5px;
+    margin-top: 15%;
+}
+
+.store1 .shape a:hover{
+    background: none;
+    border: #111 solid 2px;
+    color: #111;
+}
+
+/*ciircle*/
+
+.store1 .circular-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(10%);
+    animation: shape ease-in 2s ;
+ 
+}
+
+.store1 .circular-text .circle{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #b7947e;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.store1 .circular-text .cir{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #b7947e;
+    border-radius: 50%;
+}
+
+.store1 .circular-text .text{
+    position: absolute;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    animation: giro 30s infinite linear, shape ease-in 3s ;;
+}
+
+.store1 .circular-text .text span{
+    position: absolute;
+    left: 50%;
+    top: -17%;
+    font-size: 1.2em;
+    transform-origin: 0 100px;
+}
+
+
+  .store2{
+      background: #e5e4e4;
+  }
+
+  .store2 .container{
+    padding: 5% 0%;
+    }
+
+  .store2 .text{
+      text-align: center ;
+  }
+
+  .store2 .text h2{
+      font-size: 50px;
+      font-weight: 700;
+  }
+
+  .store2 .text p{
+      font-size: 25px;
+      font-weight: 500;
+      padding: 2% 20%;
+  }
+
+  .store2 .grids {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3% 10%;
+  }
+
+  .store2 .grid{
+      width: 35vw;
+      align-items: center;
+  }
+
+  .store2 .grid img:hover{
+      box-shadow: 0px 2px 5px  black;
+      border-radius: 50%;
+    transform: scale(1.03);
+  }
+
+  .store2 .grid p{
+      width: 22vw;
+      text-align: center;
+  }
+
+
+  /*Beauty*/
+.beauty1{
+      background: url("images/bg2.png") no-repeat center;
+      width: 100%;
+  
+  }
+
+ 
+  .beauty1 h3,
+  .beauty1 p,
+  .beauty1 a{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 5%;
+  }
+
+  .beauty1 .text{
+      padding:10% 0 ;
+  }
+
+  .beauty1 h3{
+      font-size: 50px;
+  }
+
+  .beauty1 p{
+      font-size: 25px;
+      padding-left: 60%;
+      text-align: justify;
+  }
+
+  .beauty1 a{
+margin-left: 80%;
+margin-right: 5%;
+      background: #111;
+      color: #fff;
+     text-decoration: none;   
+     text-align: center;
+  }
+
+  .beauty1 a:hover{
+      border : 2px solid black;
+      background: none;
+      color: #111;
+  }
+
+  .beauty2{
+      background: #e5e4e4;
+      padding: 6% 0;
+      padding-bottom: 13%;
+  }
+
+
+  .beauty2 h3,
+  .beauty2 p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    text-align: center;
+  }
+
+  .beauty2 h3{
+    font-size: 50px;
+    font-weight: 800;
+  }
+
+  .beauty2 p{
+      font-size: 20px;
+      padding: 2% 20%;
+
+  }
+
+  .beauty2 img{
+    margin: 0 18%;
+      width: 800px;
+      height: 400px;
+      object-fit: cover;
+  }
+
+
+.shape2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+   /* border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;*/
+    margin-top: -20%;
+}
+
+.shape2 .circle2{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+}
+
+ .shape2 .circle2 .cir-text{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.shape2 .circle2 .ctext{
+    position: absolute;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    animation: giro 30s infinite linear;
+}
+
+.shape2 .circle2 .ctext span{
+    position: absolute;
+    left: 50%;
+    top: -17%;
+    font-size: 1.2em;
+    transform-origin: 0 100px;
+}
+
+@keyframes giro {
+    100% {transform: rotate(1turn)}
+}
+
+
+/*About Us*/
+
+.abt1{
+    margin-top: -10%;
+    background: url("images/bg3.png") no-repeat center;
+    background-size: 100vw 140vh;
+    object-fit: cover;
+}
+
+.abt1 .text{
+    text-align: center;
+    padding-top: 42%;
+    padding-bottom: 5%;
+}
+
+.abt1 .text h2{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.abt1 .text p{
+    font-size: 15px;
+    margin: 0 28%;
+    padding-bottom: 2%;
+}
+
+.abt1 .text a{
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px ;
+}
+
+.abt1 .text a:hover{
+    background: none;
+    border: 2px solid #111;
+    color: #111;
+}
+
+.abt2 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e5e4e4;
+}
+
+.abt2 .left{
+    padding: 5% 0% 5% 10%;
+   
+}
+
+.abt2 .right{
+    padding: 10% 12% 7% 10%;
+}
+
+.abt2 .right input{
+width: 30vw;
+height: 5vh;
+border: none;
+}
+
+/*Conatct Us*/
+.cntct1{
+    background: #111;
+    color: #fff;
+}
+
+.cntct1 .text{
+    text-align: center;
+    padding: 5% 0;
+}
+
+.cntct1 .text h3{
+    font-size: 50px;
+}
+.cntct1 .text p{
+    font-size: 17px;
+    padding: 2% 25%;
+}
+
+.cntct2{
+    background: url("images/bg4.png") no-repeat center;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 22% 5% 22% 60% ;
+}
+
+.cntct2 .text h3{
+    font-size: 50px;
+}
+
+.cntct2 .icons{
+    font-size: 30px;
+}
+
+ footer{
+     background: #b7947e;
+     padding: 10% 5%;
+ }
+
+ footer img{
+    width: 18vw;
+    padding-left:4% ;
+ }
+
+ footer .fnav{
+     display: flex;
+ }
+
+ footer ul{
+     list-style: none;
+     padding:4%;
+ }
+
+ footer ul li a{
+     text-decoration: none;
+     color: #fff;
+ }
+footer hr{
+    padding: 0% 4%;
+}
+
+ footer p{
+     padding: 20px 4%;
+     color: #fff;
+
+ }
+
+
+ /*Media Query*/
+
+ @media only screen
+ and (max-width: 1200px) 
+ and (min-width: 1025px) {
+    .textbg p{
+        font-size: 15px;
+    }
+ }
+
+ @media only screen
+ and (max-width: 1024px) 
+ and (min-width: 769px){
+
+ }
+
+ @media only screen
+ and (max-width: 768px) 
+ and (min-width: 481px){
+     
+ }
+
+ @media only screen
+ and (max-width: 480px) 
+ and (min-width: 320px){
+     
+ }
